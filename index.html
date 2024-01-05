@@ -22,14 +22,44 @@
     <label for="msg">Order no.:</label>
     <textarea id="msg" placeholder="Enter order no."></textarea>
     <br>
-    <button onclick="send_handle()">Send Message</button>
-
+    <button onclick="send_handle()">إرسال رسالة نأكيد</button>
+    <button onclick="send_handle1()">تعديل</button>
+    <button onclick="send_handle2()">شكر</button>
     <script>
         function send_handle() {
             let num = "+2"+document.getElementById("number").value;
             let msg = encodeURIComponent(document.getElementById("msg").value);
 
+
             var win = window.open(`https://wa.me/${num}?text=عميلنا%20العزيز,%0D%0Aحاولنا%20الاتصال%20بك%20لتأكيد%20طلبك%20رقم%20${msg}%0D%0Aمن%20على%20موقعنا%20www.printrica.com%0D%0Aلشحن%20الطلب%20برجاء%20الرد%20برقم%20١%0D%0Aعلمًا%20بأن%20مدة%20الشحن%20من%20٢٤%20الى%20٣٦%20ساعة%0D%0Aشكرًا%20لاختياركم%20PRINTRICA.`, '_blank');
+            
+            if (win) {
+                // Focus the window if it's opened successfully
+                win.focus();
+            } else {
+                alert('Please enable pop-ups for this website to open WhatsApp.');
+            }
+        }
+        function send_handle1() {
+            let num = "+2"+document.getElementById("number").value;
+            let msg = encodeURIComponent(document.getElementById("msg").value);
+
+
+            var win = window.open(`https://wa.me/${num}?text=عميلنا%20العزيز,%0D%0Aبرجاء%20ارسال%20عنوانك%20بالتفصيل%20لكي%20بتم%20ارسال%20الاوردر.`, '_blank');
+            
+            if (win) {
+                // Focus the window if it's opened successfully
+                win.focus();
+            } else {
+                alert('Please enable pop-ups for this website to open WhatsApp.');
+            }
+        }        function send_handle2() {
+            let num = "+2"+document.getElementById("number").value;
+            let msg = encodeURIComponent(document.getElementById("msg").value);
+
+
+
+            var win = window.open(`https://wa.me/${num}?text=عميلنا%20العزيز,%0D%0Aشكرا%20لاختيارك%20منتجاتنا.`, '_blank');
             
             if (win) {
                 // Focus the window if it's opened successfully
