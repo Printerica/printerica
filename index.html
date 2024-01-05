@@ -19,9 +19,6 @@
     <label for="number">Phone Number:</label>
     <input type="text" id="number" placeholder="Enter phone number">
     <br>
-    <label for="name">Name:</label>
-    <input type="text" id="name" placeholder="Enter Customer name">
-    <br>
     <label for="msg">Order no.:</label>
     <textarea id="msg" placeholder="Enter order no."></textarea>
     <br>
@@ -33,7 +30,7 @@
             let msg = encodeURIComponent(document.getElementById("msg").value);
             let name = encodeURIComponent(document.getElementById("name").value);
 
-            var win = window.open(`https://wa.me/${num}?text=Hello%20${name},%0D%0AKindly%20be%20informed%20that%20your%20order%20#%20${msg}%0D%0AThanks%20for%20your%20choosing%20Printrica.`, '_blank');
+            var win = window.open(`https://wa.me/${num}?text=عميلنا%20العزيز,%0D%0Aحاولنا%20الاتصال%20بك%20لتأكيد%20طلبك%20رقم%20${msg}%0D%0Aمن%20على%20موقعنا%20www.printrica.com%0D%0Aلشحن%20الطلب%20برجاء%20الرد%20برقم%20١%0D%0Aعلمًا%20بأن%20مدة%20الشحن%20من%20٢٤%20الى%20٣٦%20ساعة%0D%0Aشكرًا%20لاختياركم%20PRINTRICA.`, '_blank');
             
             if (win) {
                 // Focus the window if it's opened successfully
