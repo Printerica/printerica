@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WhatsApp Messaging</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        input, button {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>WhatsApp Messaging</h1>
+    <label for="number">Phone Number:</label>
+    <input type="text" id="number" placeholder="Enter phone number">
+    <br>
+    <label for="name">Name:</label>
+    <input type="text" id="name" placeholder="Enter Customer name">
+    <br>
+    <label for="msg">Message:</label>
+    <textarea id="msg" placeholder="Enter your message"></textarea>
+    <br>
+    <button onclick="send_handle()">Send Message</button>
+
+    <script>
+        function send_handle() {
+            let num = document.getElementById("number").value;
+            let msg = encodeURIComponent(document.getElementById("msg").value);
+            let name = encodeURIComponent(document.getElementById("name").value);
+
+            var win = window.open(`https://wa.me/${num}?text=I%27m%20Printrica%20hello%20hello%20${name}%20client%20${msg}`, '_blank');
+            
+            if (win) {
+                // Focus the window if it's opened successfully
+                win.focus();
+            } else {
+                alert('Please enable pop-ups for this website to open WhatsApp.');
+            }
+        }
+    </script>
+</body>
+</html>
