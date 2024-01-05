@@ -33,7 +33,7 @@
             let msg = encodeURIComponent(document.getElementById("msg").value);
             let name = encodeURIComponent(document.getElementById("name").value);
 
-            var win = window.open(`https://wa.me/${num}?text=Hello%20${name},%0D%0AKindly%20be%20informed%20that%20your%20order%20no.%20${msg}%0D%0AThanks%20for%20your%20choosing%20Printrica`, '_blank');
+            var win = window.open(`https://wa.me/${num}?text=Hello%20${name},%0D%0AKindly%20be%20informed%20that%20your%20order%20#%20${msg}%0D%0AThanks%20for%20your%20choosing%20Printrica`, '_blank');
             
             if (win) {
                 // Focus the window if it's opened successfully
