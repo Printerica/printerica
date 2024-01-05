@@ -22,7 +22,7 @@
     <label for="msg">Order no.:</label>
     <textarea id="msg" placeholder="Enter order no."></textarea>
     <br>
-    <button onclick="send_handle()">إرسال رسالة نأكيد</button>
+    <button onclick="send_handle()">إرسال رسالة تأكيد</button>
     <button onclick="send_handle1()">تعديل</button>
     <button onclick="send_handle2()">شكر</button>
     <script>
@@ -45,7 +45,7 @@
             let msg = encodeURIComponent(document.getElementById("msg").value);
 
 
-            var win = window.open(`https://wa.me/${num}?text=عميلنا%20العزيز,%0D%0Aبرجاء%20ارسال%20عنوانك%20بالتفصيل%20لكي%20بتم%20ارسال%20الاوردر.`, '_blank');
+            var win = window.open(`https://wa.me/${num}?text=عميلنا%20العزيز,%0D%0Aبرجاء%20إرسال%20عنوانك%20بالتفصيل%20لكي%20يتم%20إرسال%20الاوردر.`, '_blank');
             
             if (win) {
                 // Focus the window if it's opened successfully
